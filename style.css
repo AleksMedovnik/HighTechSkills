@@ -1,0 +1,173 @@
+body{
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(90deg, #c8faf0, #1bcfab);
+}
+header{
+	min-height: 20vh;
+	padding-top: 20px;
+}
+main{
+	min-height: 120vh;
+}
+header h1{
+	position: relative;
+	width: 300px;
+	margin: auto;
+	font-family: 'Grandstander', cursive;
+	opacity: 1;
+	animation: pr_1 1s 1;
+}
+header h1 img{
+	position: absolute;
+	top: -17px;
+	left: 187px;
+	width: 50px;
+	opacity: 0.7;
+	animation: anim_img 5s infinite;
+}
+@-webkit-keyframes anim_img{
+	0%{
+		opacity: 0;
+		transform: rotate(0);
+	}
+	60%{
+		opacity: 0;
+		transform: rotate(0);
+	}
+	80%{
+		opacity: 0.6;
+		transform: rotate(0);
+	}
+	100%{
+		opacity: 0.6;
+		transform: rotate(10deg);
+	}
+
+}
+.none{
+	display: none;
+}
+.visible, .pre-1{
+	display: flex;
+	justify-content: space-around;
+	font-family: 'Kufam', cursive;
+	opacity: 1;
+}
+.elem > div, .pre-1 > div{
+	width: 25%;
+	min-height: 150px;
+	margin-bottom: 10px;
+	padding: 15px;
+	color: white;
+	background: orange;
+	border-radius: 8px;
+}
+.pre-1{
+	animation: pr_1 1s 1;
+}
+.elem > div{
+	animation: op_1 1s 1;
+}
+.elem > .elem_2{
+	animation: op_2 1.5s 1;
+}
+.elem > .elem_3:nth-of-type(1){
+	animation: op_3 1.5s 1;
+}
+.elem > .elem_3:nth-of-type(2){
+	animation: op_4 1.5s 1;
+}
+.elem > .elem_3:nth-of-type(3){
+	animation: op_5 1.5s 1;
+}
+
+@-webkit-keyframes pr_1{
+	0%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes op_1{
+	0%{
+		transform: rotate(180deg) scale(0.1);
+	}
+	100%{
+		transform: rotate(0) scale(1);
+	}
+}
+@-webkit-keyframes op_2{
+	0%{
+		transform:  scale(0.1);
+	}
+	100%{
+		transform:  scale(1);
+	}
+}
+@-webkit-keyframes op_3{
+	0%{
+		transform:  translate(200px);
+	}
+	100%{
+		transform:  translate(0);
+	}
+}
+@-webkit-keyframes op_4{
+	0%{
+		transform:  scale(0.1);
+	}
+	100%{
+		transform:  scale(1);
+	}
+}
+@-webkit-keyframes op_5{
+	0%{
+		transform:  translate(-200px);
+	}
+	100%{
+		transform:  translate(0);
+	}
+}
+
+
+
+/*slider*/
+#sliderParent, #slider, #slider img{
+	height: 95vh;
+}
+#sliderParent{
+	position: relative;
+	box-sizing: border-box;
+	width: 95%;
+	margin: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	overflow: hidden;
+	background-image: url('images/slider/filmstrip_PNG105.png');
+	background-size: 100% 100vh;
+}
+
+#slider{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-flow: row nowrap;
+	padding: 0;
+}
+#slider > div{
+	margin-right: 5px;
+	cursor: pointer;
+}
+#slider > div:last-child{
+	margin-right: 0;
+}
+#slider img{
+	width: auto;
+	border-radius: 8px;
+}
