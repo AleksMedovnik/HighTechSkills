@@ -13,7 +13,7 @@ function isVisible(elem) {
 	let topVisible = coords.top > 0 && coords.top < windowHeight;
 	let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
 
-	return topVisible || bottomVisible;
+	return topVisible && bottomVisible;
 }
 function showVisible(){
 	for (let i=0; i < parent.length; i++){
