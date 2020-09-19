@@ -36,6 +36,7 @@ header h1 img{
 	font-family: 'Kufam', cursive;
 	opacity: 1;
 }
+
 .elem > div, .pre-1 > div{
 	width: 25%;
 	min-height: 150px;
@@ -47,6 +48,9 @@ header h1 img{
 }
 .pre-1{
 	animation: pr_1 1s 1;
+}
+.visible, .pre-1:nth-of-type(2){
+	margin-bottom: 200px;
 }
 .elem > div{
 	animation: op_1 1s 1;
@@ -102,6 +106,33 @@ header h1 img{
 	border-radius: 8px;
 }
 
+.anim-text{
+	position: relative;
+	min-height: 300px;
+
+}
+.anim-text h2, .anim-text div{
+	position: absolute;
+	top: 100px;
+}
+.anim-text h2{
+	left: 40%;
+}
+
+.anim-text div{
+	left: 30%;
+	width: 35vw;
+	height: 70px;
+	background: linear-gradient(45deg, #1ac9c4, #16f2ec);
+	border-radius: 15px;
+	animation: animBG 5s infinite;
+}
+.anim-text .text-1{
+	animation: animTextTop 5s infinite;	
+}
+.anim-text .text-2{
+	animation: animTextBottom 5s infinite;	
+}
 
 @-webkit-keyframes anim_img{
 	0%{
@@ -316,5 +347,133 @@ header h1 img{
 	}
 	100%{
 		transform:  translate(0);
+	}
+}
+
+@-webkit-keyframes animBG{
+	0%{
+		transform: rotateX(0);
+	}
+	50%{
+		transform: rotateX(180deg);
+	}
+	100%{
+		transform: rotateX(0);
+	}
+}
+@-o-keyframes animBG{
+	0%{
+		transform: rotateX(0);
+	}
+	50%{
+		transform: rotateX(180deg);
+	}
+	100%{
+		transform: rotateX(0);
+	}
+}
+@-moz-keyframes animBG{
+	0%{
+		transform: rotateX(0);
+	}
+	50%{
+		transform: rotateX(180deg);
+	}
+	100%{
+		transform: rotateX(0);
+	}
+}
+
+@-webkit-keyframes animTextTop{
+	0%{
+		opacity: 1;
+	}
+	10%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-o-keyframes animTextTop{
+	0%{
+		opacity: 1;
+	}
+	10%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-moz-keyframes animTextTop{
+	0%{
+		opacity: 1;
+	}
+	10%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes animTextBottom{
+	0%{
+		opacity: 0;
+	}
+	30%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	60%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@-o-keyframes animTextBottom{
+	0%{
+		opacity: 0;
+	}
+	30%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	60%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+@-moz-keyframes animTextBottom{
+	0%{
+		opacity: 0;
+	}
+	30%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+	60%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 0;
 	}
 }
