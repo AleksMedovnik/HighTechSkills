@@ -32,6 +32,8 @@ let coordLeftStart = slider.getBoundingClientRect().left;
 let coordRightStart = slider.getBoundingClientRect().right;
 
 slider.addEventListener('mousedown', drg_n_drop);
+slider.addEventListener('vmousedown', drg_n_drop);
+
 
 document.ondragstart = () => false;
 
