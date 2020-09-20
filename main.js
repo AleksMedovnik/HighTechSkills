@@ -101,7 +101,7 @@ function drg_n_drop_mobil(){
 			slider.style.left = coordLeftStart - slider.getBoundingClientRect().width + sliderParent.getBoundingClientRect().width + 'px';
 		}
 		document.removeEventListener('touchmove', onMouseMove);
-		slider.onmouseup = null;
+		slider.ontouchmove = null;
 	}
 
 
