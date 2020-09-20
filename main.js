@@ -32,7 +32,7 @@ let coordLeftStart = slider.getBoundingClientRect().left;
 let coordRightStart = slider.getBoundingClientRect().right;
 
 slider.addEventListener('mousedown', drg_n_drop);
-slider.addEventListener('vmousedown', drg_n_drop);
+slider.addEventListener('touchstart', drg_n_drop_mobil);
 
 
 document.ondragstart = () => false;
@@ -72,3 +72,37 @@ function drg_n_drop(){
 
 }
 
+function drg_n_drop_mobil(){
+	let coordLeft = slider.getBoundingClientRect().left;
+	let coordRight = slider.getBoundingClientRect().right;
+	let shiftX = event.clientX - coordLeft + sliderParent.offsetLeft;
+	moveAt(event.pageX);
+
+	function moveAt(pageX) {
+		slider.style.left = pageX - shiftX + 'px';
+	}
+
+	function onMouseMove(event) {
+		moveAt(event.pageX);
+
+	}
+
+
+	document.addEventListener('touchmove', onMouseMove);
+	document.addEventListener('touchend ', clearEvent);
+
+
+
+	function clearEvent(){
+		if(slider.getBoundingClientRect().left > coordLeftStart){
+			slider.style.left = '0px';
+		}
+		if(slider.getBoundingClientRect().right < sliderParent.getBoundingClientRect().right){
+			slider.style.left = coordLeftStart - slider.getBoundingClientRect().width + sliderParent.getBoundingClientRect().width + 'px';
+		}
+		document.removeEventListener('touchmove', onMouseMove);
+		slider.onmouseup = null;
+	}
+
+
+}
