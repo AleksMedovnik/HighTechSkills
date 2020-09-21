@@ -511,7 +511,7 @@ header h1 img{
 
 
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 720px){
 	#sliderParent{
 		display: none;
 	}
