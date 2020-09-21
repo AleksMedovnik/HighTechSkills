@@ -32,12 +32,14 @@ header h1 img{
 }
 .visible, .pre-1{
 	display: flex;
+	flex-flow: row wrap;
 	justify-content: space-around;
 	font-family: 'Kufam', cursive;
 	opacity: 1;
 }
 
 .elem > div, .pre-1 > div{
+	box-sizing: border-box;
 	width: 25%;
 	min-height: 150px;
 	margin-bottom: 10px;
@@ -525,5 +527,11 @@ header h1 img{
 		left: 0;
 		width: 100%;
 	}
+	.visible, .pre-1{
+		flex-flow: column wrap;
+		justify-content: flex-start;
+	}
+	.elem > div, .pre-1 > div{
+		width: 100%;
 
-}
+	}
