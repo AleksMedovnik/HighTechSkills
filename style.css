@@ -14,14 +14,15 @@ header h1{
 	position: relative;
 	width: 300px;
 	margin: auto;
+	font-size: 3rem;
 	font-family: 'Grandstander', cursive;
 	opacity: 1;
 	animation: pr_1 1s 1;
 }
 header h1 img{
 	position: absolute;
-	top: -17px;
-	left: 187px;
+	top: -13px;
+	left: 295px;
 	width: 50px;
 	opacity: 0.7;
 	animation: anim_img 5s infinite;
@@ -540,5 +541,20 @@ header h1 img{
 	.elem > div, .pre-1 > div{
 		width: 100%;
 
+	}
+}
+@media screen and (max-width: 415px){
+	header h1{
+		font-size: 2rem;
+	}
+	
+	header h1 img{
+		top: -17px;
+		left: 187px;
+	}
+}
+@media screen and (max-width: 335px){
+	.anim-text{
+		left: 0;
 	}
 }
