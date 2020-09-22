@@ -10,12 +10,18 @@ header{
 main{
 	min-height: 120vh;
 }
+h1, h2, h3, h4, h5, h6,
+.anim-text-3 > div{
+	font-family: 'Grandstander', cursive;
+}
+p{
+	font-family: 'Kufam', cursive;
+}
 header h1{
 	position: relative;
 	width: 300px;
 	margin: auto;
 	font-size: 3rem;
-	font-family: 'Grandstander', cursive;
 	opacity: 1;
 	animation: pr_1 1s 1;
 }
@@ -35,7 +41,6 @@ header h1 img{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	font-family: 'Kufam', cursive;
 	opacity: 1;
 }
 
@@ -109,23 +114,29 @@ header h1 img{
 	border-radius: 8px;
 }
 
-
+.anim-text, .anim-text-2, .anim-text-3{
+	position: relative;
+}
+.anim-text-2 > p, 
+.anim-text h2, 
+.anim-text div, 
+.anim-text-3 > h2,
+.anim-text-3 > div{
+	position: absolute;
+}
 
 .anim-text{
-	position: relative;
 	left: 30%;
 	min-height: 300px;
 	text-align: center;
 	width: 280px;
 }
 .anim-text h2, .anim-text div{
-	position: absolute;
 	top: 50px;
 }
 .anim-text h2{
 	left: 15px;
 	width: 250px;
-	font-family: 'Grandstander', cursive;
 }
 
 .anim-text div{
@@ -144,7 +155,6 @@ header h1 img{
 }
 
 .anim-text-2{
-	position: relative;
 	width: 400px;
 	height: 35px;
 	top: 0;
@@ -153,14 +163,102 @@ header h1 img{
 	overflow: hidden;
 }
 .anim-text-2 > p{
-	position: absolute;
 	top: 0;
 	left: 0;
 	width: 3000px;
-	font-family: 'Kufam', cursive;
 	animation: animTextTwoo 30s infinite;
 	animation-timing-function: linear;
 }
+
+.anim-text-3{
+	width: 400px;
+	height: 100px;
+	top: 0;
+	left: 30%;
+	margin-bottom: 100px;
+}
+.anim-text-3 > h2{
+	opacity: 0;
+}
+
+.anim-text-3 > div{
+	margin: 0;
+	padding: 0;
+	font-size: 3rem;
+}
+.anim-text-3 > div > div{
+	display: inline-block;
+	margin-right: -10px;
+}
+.anim-text-3 > div > .jump:nth-of-type(2){
+	animation: jumpFirst 2s infinite;
+}
+.anim-text-3 > div > .jump:nth-of-type(7){
+	animation: jumpLast 2s infinite;
+}
+.anim-text-3 > div > .rotate{
+	animation: rotate 2s infinite;
+}
+.anim-text-3 > div > .margin{
+	animation: anim_margin 2s infinite;
+}
+
+
+@-webkit-keyframes jumpFirst{
+	0%{
+		transform: translateY(0);
+	}
+	20%{
+		transform: translateY(0);
+	}
+	25%{
+		transform: translateY(-10px);
+	}
+	30%{
+		transform: translateY(0);
+	}
+}
+@-webkit-keyframes jumpLast{
+	0%{
+		transform: translateY(0);
+	}
+	90%{
+		transform: translateY(0);
+	}
+	95%{
+		transform: translateY(-10px);
+	}
+}
+@-webkit-keyframes rotate{
+	0%{
+		transform: rotate(0);
+	}
+	50%{
+		transform: rotate(0);
+	}
+	55%{
+		transform: rotate(-45deg);
+	}
+	60%{
+		transform: rotate(0);
+	}
+}
+@-webkit-keyframes anim_margin{
+	0%{
+		margin-right: -10px;
+	}
+	60%{
+		margin-right: -10px;
+	}
+	65%{
+		margin-right: 10px;
+	}
+	70%{
+		margin-right: -10px;
+	}
+}
+
+
 
 @-webkit-keyframes anim_img{
 	0%{
