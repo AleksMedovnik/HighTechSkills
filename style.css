@@ -204,6 +204,28 @@ header h1 img{
 }
 
 
+
+.parallax-1 {
+	background-image: url("https://avatarko.ru/img/kartinka/33/multfilm_lyagushka_32117.jpg");
+	height: 600px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.text-3{
+	background: linear-gradient(45deg, #415b75, #0e1012);
+	min-height: 700px;
+}
+.parallax-2{
+	background-image: url("https://www.imgonline.com.ua/examples/bee-on-daisy.jpg");
+	height: 1000px; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+
 @-webkit-keyframes jumpFirst{
 	0%{
 		transform: translateY(0);
