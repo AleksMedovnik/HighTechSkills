@@ -229,9 +229,6 @@ header h1 img{
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
-.text-4:nth-of-type(4){
-	background-image: url('images/landshaft-bernskikh-alp-v-yasniy-den_thumb.jpg');
-}
 
 
 @-webkit-keyframes jumpFirst{
