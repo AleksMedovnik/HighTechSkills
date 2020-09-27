@@ -1,17 +1,64 @@
-body{
+body, header, nav, ul{
 	margin: 0;
 	padding: 0;
+}
+body{
 	background: linear-gradient(90deg, #c8faf0, #1bcfab);
 }
 header{
 	min-height: 20vh;
 	padding-top: 20px;
 }
+nav{
+	margin-top: 30px;
+}
+nav ul{
+	list-style: none;
+}
+nav .menu{
+	position: relative;
+	width: 700px;
+	left: 300px;
+}
+nav .menu > li, nav .menu > li li{
+	display: inline-block;
+
+}
+nav .menu > li{
+	margin: -1px;
+
+}
+nav .menu > li > ul{
+	position: absolute;
+	box-sizing: border-box;
+	width: 100vw;
+	left: -318px;
+	display: none;
+	background: #0c5e75;
+	padding-left: 200px;
+}
+nav .menu a{
+	display: block;
+	height: 50px;
+	padding: 15px 20px;
+	text-decoration: none;
+	font-size: 1.5rem;
+	border-top-left-radius: 10px;
+	color: #eb7f86;
+	background: #0c5e75;
+}
+nav .list-1:hover .ul-1{
+	display: block;
+}
+
+
 main{
 	min-height: 120vh;
+	padding-top: 90px;
 }
 h1, h2, h3, h4, h5, h6,
-.anim-text-3 > div{
+.anim-text-3 > div,
+.button{
 	font-family: 'Grandstander', cursive;
 }
 p{
@@ -37,14 +84,17 @@ header h1 img{
 .none{
 	display: none;
 }
-.visible, .pre-1{
+.visible{
+	display: block;
+}
+.block, .pre-1{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 	opacity: 1;
 }
 
-.elem > div, .pre-1 > div{
+.block > div, .pre-1 > div{
 	box-sizing: border-box;
 	width: 25%;
 	min-height: 150px;
@@ -57,22 +107,22 @@ header h1 img{
 .pre-1{
 	animation: pr_1 1s 1;
 }
-.visible, .pre-1:nth-of-type(2){
+.block, .pre-1:nth-of-type(2){
 	margin-bottom: 200px;
 }
-.elem > div{
+.block > div{
 	animation: op_1 1s 1;
 }
-.elem > .elem_2{
+.block > .elem_2{
 	animation: op_2 1.5s 1;
 }
-.elem > .elem_3:nth-of-type(1){
+.block > .elem_3:nth-of-type(1){
 	animation: op_3 1.5s 1;
 }
-.elem > .elem_3:nth-of-type(2){
+.block > .elem_3:nth-of-type(2){
 	animation: op_4 1.5s 1;
 }
-.elem > .elem_3:nth-of-type(3){
+.block > .elem_3:nth-of-type(3){
 	animation: op_5 1.5s 1;
 }
 
@@ -222,13 +272,62 @@ header h1 img{
 	background-size: 100% auto;
 }
 .text-4{
-	color: white;
 	background-image: url('images/151517-s_vysoty_ptichego_poleta-gorodskoj_pejzazh-delovoj_rajon-metropoliya-gollivud-550x310.jpg');
 	min-height: 700px;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 }
+
+
+
+
+.buttonWaw{
+	position: relative;
+	box-sizing: border-box;
+	width: 150px;
+	height: 50px;
+	margin: 50px 0 250px 250px;
+	text-align: center;
+	overflow: hidden;
+	background: transparent;
+	border-radius: 10px;
+	border: 1px solid #d40838;
+	z-index: 1;
+}
+
+.button{
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 2rem;
+	color: #d40838;
+	padding-top: 15px;
+	text-decoration: none;
+	transition: color 1s;
+
+}
+.button:hover{
+	color: #ed0004;
+}
+.before{
+	position: absolute;
+	top: 80px;
+	left: -70px;
+	width: 300px;
+	height: 150px;
+	background: linear-gradient(0deg, #ebeb09, #f0f07a);
+	z-index: -10;
+	transform: rotate(15deg);
+	transition: 0.5s;
+}
+.buttonWaw:hover .before{
+	top: -70px;
+	left: -70px;
+}
+
+
+
 
 
 @-webkit-keyframes jumpFirst{
@@ -510,9 +609,6 @@ header h1 img{
 	50%{
 		transform: rotateX(180deg);
 	}
-	100%{
-		transform: rotateX(0);
-	}
 }
 @-o-keyframes animBG{
 	0%{
@@ -667,6 +763,19 @@ header h1 img{
 		width: 100%;
 
 	}
+}
+
+
+@media screen and (max-width: 1015px){
+	nav .menu{
+		left: 30px;
+	}
+	nav .menu > li > ul{
+		left: -47px;
+	}
+}
+@media screen and (max-width: 800px){
+
 }
 @media screen and (max-width: 415px){
 	header h1{
