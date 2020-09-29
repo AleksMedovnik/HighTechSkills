@@ -8,6 +8,28 @@ body{
 header{
 	min-height: 20vh;
 	padding-top: 20px;
+	font-family: 'Grandstander', cursive;
+}
+header h1{
+	position: relative;
+	width: 300px;
+	margin: auto;
+	font-size: 3rem;
+	background: linear-gradient(45deg, #0B2349 33%, #0D61BC 66%, #8AA9D6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #0B2349;
+	display: table;
+	opacity: 1;
+	animation: pr_1 1s 1;
+}
+header h1 img{
+	position: absolute;
+	top: -13px;
+	left: 295px;
+	width: 50px;
+	opacity: 0.7;
+	animation: anim_img 5s infinite;
 }
 nav{
 	margin-top: 30px;
@@ -35,7 +57,7 @@ nav .menu > li > ul{
 	left: -318px;
 	display: none;
 	background: #0c5e75;
-	padding-left: 200px;
+	padding-left: 30%;
 }
 nav .menu a{
 	display: block;
@@ -47,7 +69,13 @@ nav .menu a{
 	color: #eb7f86;
 	background: #0c5e75;
 }
-nav .list-1:hover .ul-1{
+nav .menu ul a{
+	font-size: 1rem;
+}
+nav .list-1:hover .ul-1,
+nav .list-2:hover .ul-2,
+nav .list-3:hover .ul-3,
+nav .list-4:hover .ul-4{
 	display: block;
 }
 
@@ -64,22 +92,9 @@ h1, h2, h3, h4, h5, h6,
 p{
 	font-family: 'Kufam', cursive;
 }
-header h1{
-	position: relative;
-	width: 300px;
-	margin: auto;
-	font-size: 3rem;
-	opacity: 1;
-	animation: pr_1 1s 1;
-}
-header h1 img{
-	position: absolute;
-	top: -13px;
-	left: 295px;
-	width: 50px;
-	opacity: 0.7;
-	animation: anim_img 5s infinite;
-}
+
+
+
 
 .none{
 	display: none;
@@ -737,31 +752,10 @@ header h1 img{
 
 
 
-@media screen and (max-width: 800px){
-	#sliderParent{
-		display: none;
-	}
-	.elem > div, .pre-1 > div{
-		width: 100%;
 
-	}
-
-}
-@media screen and (max-width: 540px){
-	.anim-text{
-		left: 10%;
-	}
-	.anim-text-2{
-		left: 0;
-		width: 100%;
-	}
-	.visible, .pre-1{
-		flex-flow: column wrap;
-		justify-content: flex-start;
-	}
-	.elem > div, .pre-1 > div{
-		width: 100%;
-
+@media screen and (max-width: 1050px){
+	nav .menu > li > ul{
+		padding-left: 15%;
 	}
 }
 
@@ -773,9 +767,47 @@ header h1 img{
 	nav .menu > li > ul{
 		left: -47px;
 	}
+	.parallax{
+		display: none;
+	}
+	nav .menu > li > ul{
+		padding-left: 15%;
+	}
 }
 @media screen and (max-width: 800px){
+	.anim-text-3{
+		width: 400px;
+		left: 10%;
+	}
+	#sliderParent{
+		display: none;
+	}
+	.elem > div, .pre-1 > div{
+		width: 100%;
 
+	}
+}
+@media screen and (max-width: 540px){
+	.anim-text{
+		left: 10%;
+	}
+	.anim-text-2{
+		left: 0;
+		width: 100%;
+	}
+	.block, .pre-1{
+		flex-flow: column wrap;
+		justify-content: flex-start;
+	}
+	.block > div, .pre-1 > div{
+		width: 100%;
+
+	}
+}
+@media screen and (max-width: 485px){
+	.anim-text-3 > div{
+		font-size: 2rem;
+	}
 }
 @media screen and (max-width: 415px){
 	header h1{
@@ -785,6 +817,13 @@ header h1 img{
 	header h1 img{
 		top: -17px;
 		left: 187px;
+	}
+	.anim-text-3{
+		width: 400px;
+		left: 10%;
+	}
+	.anim-text-3 > div{
+		font-size: 2rem;
 	}
 }
 @media screen and (max-width: 335px){
